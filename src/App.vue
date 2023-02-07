@@ -2,23 +2,24 @@
 	export default {
 		data() {
       return {
-        text: 'xxx',
-        text1: 'zzz'
+        name: 'Yunus',
+		    surn: 'Mustafaev',
+        cost: 50,
+        amount: 100,
 	}
   },
-  methods: {
-		change: function() {
-		this.text = 'yyy';
-    this.text1 = 'zzz';
+  computed: {
+	full: function() {
+		return this.cost * this.amount;
 	}
 }
+  
 	}
 </script>
 <template>
-  {{ text }}
-  {{ text1 }}
-	<button @click="change">Yunus Mustafaev</button>
-  <button @click="change">2</button>
+  <p>{{ name }}</p>
+	<p>{{ surn }}</p>
+	<p>{{ full }}</p>
 </template>
 
 <style scoped>
@@ -33,7 +34,7 @@ header {
 
 @media (min-width: 1024px) {
 
-  div
+  p
   {
     color:red
   }
