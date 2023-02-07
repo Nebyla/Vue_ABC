@@ -1,12 +1,16 @@
 <script>
 	export default {
-		name: 'App',
+		data() {
+	  return {
+		name: 'Yunus',
+		surn: 'Mustafaev',
+	}
+}
 	}
 </script>
 <template>
-  <div>
-		Hello World
-	</div>
+  <p>{{ name }}</p>
+	<p>{{ surn }}</p>
 </template>
 
 <style scoped>
@@ -21,7 +25,7 @@ header {
 
 @media (min-width: 1024px) {
 
-  div
+  p
   {
     color:red
   }
