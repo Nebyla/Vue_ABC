@@ -1,10 +1,14 @@
 <script>
 	export default {
 		data() {
-    },
+      return {
+		num1: 1,
+		num2: 2,
+	}
+  },
   methods: {
 	show: function() {
-		alert('07.02.2023');
+		alert(this.num1+this.num2);
 	}
 
 }
