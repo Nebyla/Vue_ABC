@@ -2,22 +2,20 @@
 	export default {
 		data() {
       return {
-		text: '15',
+		num1: 2,
+    num2: 4,
 	}
   },
   methods: {
-	show: function() {
-		let text = this.cape(this.text);
-		alert(text);
-	},
-	cape: function(str) {
-		return str[0].toUpperCase() + str.slice(1);
+	show: function(str) {
+		alert(str*this.num1,str*this.num2);
 	}
 }
 	}
 </script>
 <template>
-  <button @mouseover="show">Yunus Mustafaev</button>
+  <button @click="show(num1)">Yunus Mustafaev</button>
+	<button @click="show(num2)">Bottom 2</button>
 </template>
 
 <style scoped>
