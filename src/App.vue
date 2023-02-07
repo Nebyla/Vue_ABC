@@ -11,7 +11,7 @@
 	}
 </script>
 <template>
-  {{ show() }}
+  <button @mouseover="show">Yunus Mustafaev</button>
 </template>
 
 <style scoped>
