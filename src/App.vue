@@ -1,14 +1,17 @@
 <script>
 	export default {
 		data() {
-	  return {
-      obj: {x: 1, y: 2, z: 3},
+    },
+  methods: {
+	show: function() {
+		alert('07.02.2023');
 	}
+
 }
 	}
 </script>
 <template>
-  <div>{{ obj['x']+ obj['y']+obj['z']  }}</div>
+  {{ show() }}
 </template>
 
 <style scoped>
