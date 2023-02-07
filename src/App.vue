@@ -2,15 +2,13 @@
 	export default {
 		data() {
 	  return {
-      num1: 1,
-		num2: 2,
-		num3: 3,
+      arr: [1, 2, 3],
 	}
 }
 	}
 </script>
 <template>
-  <div>{{ num1 + num2 + num3 }}</div>
+  <div>{{ arr[0]+arr[1]+arr[2] }}</div>
 </template>
 
 <style scoped>
