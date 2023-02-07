@@ -2,15 +2,17 @@
 	export default {
 		data() {
       return {
-		num1: 1,
-		num2: 2,
+		text: '15',
 	}
   },
   methods: {
 	show: function() {
-		alert(this.num1+this.num2);
+		let text = this.cape(this.text);
+		alert(text);
+	},
+	cape: function(str) {
+		return str[0].toUpperCase() + str.slice(1);
 	}
-
 }
 	}
 </script>
