@@ -2,7 +2,7 @@
 	export default {
 		data() {
       return {
-        day: 7,
+        age: 25,
 	}
   }
   
@@ -11,9 +11,10 @@
 	}
 </script>
 <template>
-  <p v-if="day === 1 || day === 7">
-		Воскресение
+  <p v-if="age === 19 || age === 25">
+		молодой человек
 	</p>
+  <p v-else>Мужчина</p>
 	
 </template>
 
