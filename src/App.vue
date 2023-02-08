@@ -15,7 +15,9 @@
 	}
 </script>
 <template>
-  <button @click="toggle">toggle</button>
+  <button @click="toggle">
+		{{ visible ? 'hide' : 'show' }}
+	</button>
 	<p v-if="visible">Yunus Mustafaev</p>
 	
 </template>
