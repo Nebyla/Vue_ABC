@@ -2,15 +2,25 @@
 	export default {
 		data() {
       return {
-        hidden: true,
+        visible: true,
 	}
-  }
+  },
+  methods: {
+	hide: function() {
+		this.visible = false;
+	},
+  mide: function() {
+		this.visible = true;
+	}
+}
 
   
 	}
 </script>
 <template>
- <p v-if="hidden">Yunus Mustafaev</p>
+  <button @click="hide">hide</button>
+  <button @click="mide">mide</button>
+	<p v-if="visible">Yunus Mustafaev</p>
 	
 </template>
 
