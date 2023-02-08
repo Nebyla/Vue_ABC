@@ -2,15 +2,25 @@
 	export default {
 		data() {
       return {
-        arr: ['x', 'y', 'z'],
+        user1: '100$',
+	      user2: '200$',
+	      user3: '300$',
 	}
   }
 	}
 </script>
 <template>
-  <p v-for="(elem, key) in arr">
-		 {{ key + 1 }} {{ elem }}
-	</p>
+  <ul>
+    <li v-for="elem in user1">
+		{{ elem }}
+    </li>
+    <li v-for="elem in user2">
+		{{ elem }}
+    </li>
+    <li v-for="elem in user3">
+		{{ elem }}
+    </li>
+</ul>
 	
 </template>
 
