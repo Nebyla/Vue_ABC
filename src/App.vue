@@ -6,20 +6,16 @@
 	}
   },
   methods: {
-	hide: function() {
-		this.visible = false;
-	},
-  mide: function() {
-		this.visible = true;
-	}
+    toggle: function() {
+	this.visible = !this.visible;
+}
 }
 
   
 	}
 </script>
 <template>
-  <button @click="hide">hide</button>
-  <button @click="mide">mide</button>
+  <button @click="toggle">toggle</button>
 	<p v-if="visible">Yunus Mustafaev</p>
 	
 </template>
