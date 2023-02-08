@@ -2,25 +2,13 @@
 	export default {
 		data() {
       return {
-        isAuth: true,
+        items: [1, 2, 3, 4, 5],
 	}
-  },
-  methods: {
-    toggle: function() {
-	this.isAuth = !this.isAuth;
-}
-}
-  
-
-  
+  }
 	}
 </script>
 <template>
-  <button @click="toggle">toggle</button>
-  <div v-if="isAuth">
-		<p>Yunus Mustafaev</p>
-		<p>+++</p>
-	</div>
+  <ul v-for="elem in items">{{ elem }}</ul>
 	
 </template>
 
