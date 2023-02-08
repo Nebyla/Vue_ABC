@@ -2,7 +2,7 @@
 	export default {
 		data() {
       return {
-        isAdmin: true,
+        day: 7,
 	}
   }
   
@@ -11,8 +11,9 @@
 	}
 </script>
 <template>
-  <p v-if="isAdmin">Yunus Mustafaev</p>
-	<p v-else>---</p>
+  <p v-if="day === 1 || day === 7">
+		Воскресение
+	</p>
 	
 </template>
 
