@@ -2,13 +2,15 @@
 	export default {
 		data() {
       return {
-        items: [1, 2, 3, 4, 5],
+        arr: ['x', 'y', 'z'],
 	}
   }
 	}
 </script>
 <template>
-  <ul v-for="elem in items">{{ elem }}</ul>
+  <p v-for="(elem, key) in arr">
+		 {{ key + 1 }} {{ elem }}
+	</p>
 	
 </template>
 
