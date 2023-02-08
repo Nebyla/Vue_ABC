@@ -2,24 +2,20 @@
 	export default {
 		data() {
       return {
-        name: 'Yunus',
-		    surn: 'Mustafaev',
-        cost: 50,
-        amount: 100,
+        Ssilka: 'Ссылка'
 	}
   },
-  computed: {
-	full: function() {
-		return this.cost * this.amount;
+  methods: {
+	show: function(str) {
+		alert(this.Ssilka);
 	}
 }
   
 	}
 </script>
 <template>
-  <p>{{ name }}</p>
-	<p>{{ surn }}</p>
-	<p>{{ full }}</p>
+  <a href="Ssilka" @click="show(num1)">{{ Ssilka }}</a>
+	
 </template>
 
 <style scoped>
