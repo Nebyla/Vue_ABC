@@ -2,26 +2,15 @@
 	export default {
 		data() {
       return {
-        user1: '100$',
-	      user2: '200$',
-	      user3: '300$',
+        items: [1, 2, 3],
 	}
   }
 	}
 </script>
-<template>
-  <ul>
-    <li v-for="elem in user1">
-		{{ elem }}
-    </li>
-    <li v-for="elem in user2">
-		{{ elem }}
-    </li>
-    <li v-for="elem in user3">
-		{{ elem }}
-    </li>
-</ul>
-	
+<template >
+  <template v-for="elem in items">
+		<ul>{{ elem }}</ul>
+	</template>
 </template>
 
 <style scoped>
