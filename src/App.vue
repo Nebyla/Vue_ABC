@@ -4,16 +4,21 @@
       return {
         isAuth: true,
 	}
-  }
+  },
+  methods: {
+    toggle: function() {
+	this.isAuth = !this.isAuth;
+}
+}
   
 
   
 	}
 </script>
 <template>
+  <button @click="toggle">toggle</button>
   <div v-if="isAuth">
 		<p>Yunus Mustafaev</p>
-		<p>+++</p>
 		<p>+++</p>
 	</div>
 	
