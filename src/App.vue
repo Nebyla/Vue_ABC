@@ -2,7 +2,7 @@
 	export default {
 		data() {
       return {
-        visible: true,
+        hidden: true,
 	}
   }
 
@@ -10,7 +10,7 @@
 	}
 </script>
 <template>
-  <p v-if="visible">Yunus Mustafaev</p>
+ <p v-if="hidden">Yunus Mustafaev</p>
 	
 </template>
 
