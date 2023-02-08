@@ -2,23 +2,17 @@
 	export default {
 		data() {
       return {
-        visible: true,
+        isAdmin: true,
 	}
-  },
-  methods: {
-    toggle: function() {
-	this.visible = !this.visible;
-}
-}
+  }
+  
 
   
 	}
 </script>
 <template>
-  <button @click="toggle">
-		{{ visible ? 'hide' : 'show' }}
-	</button>
-	<p v-if="visible">Yunus Mustafaev</p>
+  <p v-if="isAdmin">Yunus Mustafaev</p>
+	<p v-else>---</p>
 	
 </template>
 
