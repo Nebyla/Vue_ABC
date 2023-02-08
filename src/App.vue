@@ -2,19 +2,15 @@
 	export default {
 		data() {
       return {
-        Ssilka: 'Ссылка'
+        visible: true,
 	}
-  },
-  methods: {
-	show: function(str) {
-		alert(this.Ssilka);
-	}
-}
+  }
+
   
 	}
 </script>
 <template>
-  <a href="Ssilka" @click="show(num1)">{{ Ssilka }}</a>
+  <p v-if="visible">Yunus Mustafaev</p>
 	
 </template>
 
