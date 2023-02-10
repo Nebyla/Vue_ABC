@@ -2,45 +2,19 @@
 	export default {
 		data() {
       return {
-        products: [
+        numbers: [
 			{
-				name: 'product1',
-				price: 100,
-				quantity: 5
-			},
-			{
-				name: 'product2',
-				price: 200,
-				quantity: 4
-			},
-			{
-				name: 'product3',
-				price: 300,
-				quantity: 3
-			},
+				nums: 1
+      }
 		]
 	}
   }
 	}
 </script>
 <template >
-  <table v-for="product in products">
-	<tr>
-		<td>product1</td>
-		<td>100</td>
-		<td>5</td>
-	</tr>
-	<tr>
-		<td>product2</td>
-		<td>200</td>
-		<td>4</td>
-	</tr>
-	<tr>
-		<td>product3</td>
-		<td>300</td>
-		<td>3</td>
-	</tr>
-</table>
+  <p v-for="num in numbers">
+		{{ num.nums }}
+	</p>
 </template>
 
 <style scoped>
