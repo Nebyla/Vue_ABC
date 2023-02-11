@@ -2,20 +2,15 @@
 	export default {
 		data() {
       return {
-        obj: {
-          isValid: true,
-		      isDisabled: true,
-		},
+        message: 'Yunus Mustafaev',
 	} 
 }
-
-  
 	}
 
 </script>
 <template >
- <p style="{font-weight: bold;}">Yunus Mustafev</p>
- <p>2</p>
+<input v-model="message">
+	<ul>{{ message }}</ul>
 </template>
 
 <style scoped>
@@ -30,7 +25,10 @@ header {
 }
 
 @media (min-width: 1024px) {
-
+ul
+{
+  text-transform:uppercase;
+}
   p {
     color: red;
     border: '1px solid green'
