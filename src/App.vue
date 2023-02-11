@@ -2,20 +2,15 @@
 	export default {
 		data() {
       return {
-        text: '',
+        checked: true,
 	} 
 },
-methods: {
-	calc: function() {
-		this.res = Math.sqrt(this.num);
-	}
-}
-	}
 
+  }
 </script>
 <template >
-<textarea v-model="text"></textarea>
-	<ul>{{ text }}</ul>
+<input type="checkbox" v-model="checked">
+	<p>{{ checked ? 'Yunus Mustafaev' : '' }}</p>
 </template>
 
 <style scoped>
