@@ -2,19 +2,21 @@
 	export default {
 		data() {
       return {
-        choice: '',
+        selected: 'Не указан',
 	} 
 },
 
   }
 </script>
 <template >
-<input name="radio" type="radio" v-model="choice" value="v1">
-<p>Python {{ choice }}</p>
-	<input name="radio" type="radio" v-model="choice" value="v2">
-  <p>CSS {{ choice }}</p>
-	<input name="radio" type="radio" v-model="choice" value="v3">
-  <p>HTML {{ choice }}</p>
+  <P>в каком городе ты живешь</P>
+<select v-model="selected">
+		<option>Симферополь</option>
+		<option>Севастополь</option>
+		<option>Москва</option>
+	</select>
+	
+	<p>{{ selected }}</p>
 </template>
 
 <style scoped>
