@@ -3,20 +3,11 @@
 		data() {
       return {
         obj: {
-          hidden: true,
+          active: true, 
+          valid: false
 		},
 	} 
-  },
-  methods: {
-	setDone: function() {
-		this.obj.hidden = false ;
-	}
-},
-  Cata:{
-    sickret: function() {
-		this.obj.hidden = true ;
-	}
-  }
+}
 
   
 	}
@@ -25,9 +16,6 @@
 <template >
  <p :class="obj">Yunus Mustafev</p>
  <p :class="obj">2</p>
- <button @click="setDone">hide</button>
- 
- <button @click="sickret">smoke</button>
 </template>
 
 <style scoped>
@@ -44,7 +32,6 @@ header {
 
   p.hidden {
     color: red;
-	display: none;
 }
   .logo {
     margin: 0 2rem 0 0;
