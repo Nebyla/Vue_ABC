@@ -2,15 +2,19 @@
 	export default {
 		data() {
       return {
-        checked: true,
+        arr: [],
 	} 
 },
 
   }
 </script>
 <template >
-<input type="checkbox" v-model="checked">
-	<p>{{ checked ? 'Yunus Mustafaev' : '' }}</p>
+<input type="checkbox" v-model="arr" value="Python">
+<p>{{ arr }}Python</p>
+	<input type="checkbox" v-model="arr" value="CSS">
+  <p>{{ arr }}CSS</p>
+	<input type="checkbox" v-model="arr" value="html">
+  <p>{{ arr }}html</p>
 </template>
 
 <style scoped>
