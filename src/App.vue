@@ -2,15 +2,22 @@
 	export default {
 		data() {
       return {
-        message: 'Yunus Mustafaev',
+        num: 0,
+		res: 0
 	} 
+},
+methods: {
+	calc: function() {
+		this.res = Math.sqrt(this.num);
+	}
 }
 	}
 
 </script>
 <template >
-<input v-model="message">
-	<ul>{{ message }}</ul>
+<p>{{ res }}</p>
+	<input v-model="num">
+	<button v-on:click="calc">work</button>
 </template>
 
 <style scoped>
