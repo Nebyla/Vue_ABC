@@ -3,17 +3,17 @@
 		data() {
       return {
         selected: 'Не указан',
+		options: ['Понедельник', 'Вторник', 'Среда','Четверг','Пятница','Суббота','Воскресение'],
 	} 
 },
 
   }
 </script>
 <template >
-  <P>в каком городе ты живешь</P>
+  <p>Выберите день недели</p>
 <select v-model="selected">
-		<option>Симферополь</option>
-		<option>Севастополь</option>
-		<option>Москва</option>
+		<option v-for="option in options">{{ option }}</option>
+    
 	</select>
 	
 	<p>{{ selected }}</p>
