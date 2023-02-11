@@ -2,8 +2,7 @@
 	export default {
 		data() {
       return {
-        num: 0,
-		res: 0
+        text: '',
 	} 
 },
 methods: {
@@ -15,9 +14,8 @@ methods: {
 
 </script>
 <template >
-<p>{{ res }}</p>
-	<input v-model="num">
-	<button v-on:click="calc">work</button>
+<textarea v-model="text"></textarea>
+	<ul>{{ text }}</ul>
 </template>
 
 <style scoped>
