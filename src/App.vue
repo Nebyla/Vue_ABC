@@ -3,8 +3,8 @@
 		data() {
       return {
         obj: {
-          active: true, 
-          valid: false
+          isValid: true,
+		      isDisabled: true,
 		},
 	} 
 }
@@ -14,7 +14,7 @@
 
 </script>
 <template >
- <p :class="obj">Yunus Mustafev</p>
+ <p :class="{active: isValid, error: isDisabled}">Yunus Mustafev</p>
  <p :class="obj">2</p>
 </template>
 
@@ -30,8 +30,9 @@ header {
 
 @media (min-width: 1024px) {
 
-  p.hidden {
+  p {
     color: red;
+    display: block;
 }
   .logo {
     margin: 0 2rem 0 0;
