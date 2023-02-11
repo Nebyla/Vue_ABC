@@ -2,19 +2,19 @@
 	export default {
 		data() {
       return {
-        arr: [],
+        choice: '',
 	} 
 },
 
   }
 </script>
 <template >
-<input type="checkbox" v-model="arr" value="Python">
-<p>{{ arr }}Python</p>
-	<input type="checkbox" v-model="arr" value="CSS">
-  <p>{{ arr }}CSS</p>
-	<input type="checkbox" v-model="arr" value="html">
-  <p>{{ arr }}html</p>
+<input name="radio" type="radio" v-model="choice" value="v1">
+<p>Python {{ choice }}</p>
+	<input name="radio" type="radio" v-model="choice" value="v2">
+  <p>CSS {{ choice }}</p>
+	<input name="radio" type="radio" v-model="choice" value="v3">
+  <p>HTML {{ choice }}</p>
 </template>
 
 <style scoped>
