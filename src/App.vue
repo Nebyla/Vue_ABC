@@ -2,27 +2,16 @@
 	export default {
 		data() {
       return {
-        arr: ['a', 'b', 'c'],
-	}
-  
+        str: 'active valid',
+	} 
   },
-  methods:
-{
-	add: function() {
-		this.arr.push('xxx');
-	}
-}
+
   
 	}
 
 </script>
 <template >
-  <p>
-		Yunus Mustafaev
-	</p>
-	<p>
-		2
-	</p>
+ <p :class="str">Yunus Mustafev</p>
 </template>
 
 <style scoped>
@@ -40,6 +29,7 @@ header {
   p
   {
     color:red
+    
   }
   .logo {
     margin: 0 2rem 0 0;
