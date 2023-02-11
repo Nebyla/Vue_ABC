@@ -2,29 +2,25 @@
 	export default {
 		data() {
       return {
-        products: [
-			{
-				id: 1,
-				name: 'product1',
-			},
-			{
-				id: 2,
-				name: 'product2',
-			},
-			{
-				id: 3,
-				name: 'product3',
-			},
-		]
+        arr: ['a', 'b', 'c'],
 	}
-  }
+  
+  },
+  methods:
+{
+	add: function() {
+		this.arr.push('xxx');
 	}
+}
+  
+	}
+
 </script>
 <template >
-  <p v-for="user in products" :key="user.id">
-		{{ user.id }}
-		{{ user.name }}
+  <p v-for="elem in arr">
+		{{ elem }}
 	</p>
+	<button @click="add">add</button>
 </template>
 
 <style scoped>
