@@ -17,10 +17,12 @@
 
 </script>
 <template >
-  <p v-for="elem in arr">
-		{{ elem }}
+  <p>
+		Yunus Mustafaev
 	</p>
-	<button @click="add">add</button>
+	<p>
+		2
+	</p>
 </template>
 
 <style scoped>
