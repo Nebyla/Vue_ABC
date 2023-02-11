@@ -2,7 +2,10 @@
 	export default {
 		data() {
       return {
-        str: 'active valid',
+        obj: {
+          done: true,
+			    selected:  false,
+		},
 	} 
   },
 
@@ -11,7 +14,8 @@
 
 </script>
 <template >
- <p :class="str">Yunus Mustafev</p>
+ <p :class="obj">Yunus Mustafev</p>
+ <p :class="obj">2</p>
 </template>
 
 <style scoped>
@@ -29,6 +33,7 @@ header {
   p
   {
     color:red
+    
     
   }
   .logo {
