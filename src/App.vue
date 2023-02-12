@@ -27,28 +27,20 @@ import User from './components/User.vue'
 	}
 },
 methods: {
-	change(id, name, surn) {
-		this.users = this.users.map((user) => {
-			if (user.id === id) {
-				user.name = name;
-				user.surn = surn;
-			}
-			return user;
+	add(name, surn) {
+		let id = this.users.length + 1;
+		
+		this.users.push({
+			id,
+			name,
+			surn
 		});
 	}
 }
 }
 </script>
 <template >
-	<User
-		v-for   ="user in users"
-		
-		:id     ="user.id"
-		:name   ="user.name"
-		:surn   ="user.surn"
-		:key    ="user.id"
-		@change="change"
-	/>
+	<User Form @add="add" />
 </template>
 
 <style scoped>
