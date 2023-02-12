@@ -1,20 +1,19 @@
 <script>
 	export default {
-	emits: ['show', 'xxx', 'yyy'],
-	data() {
-		return {
-		}
-	},
-	methods: {
-		handle() {
-		this.$emit('show', 'xxx', 'yyy');
-	}
-}
+		props: {
+	id:     Number,
+	name:   String,
+	surn:   String,
+},
+emits: ['remove'],
+		
 }
 </script>
 <template>
 	
-	<button @click="$emit('show', 'xxx', 'yyy')">
-		btn
+	{{ name }}
+	{{ surn }}
+	<button @click="$emit('remove', id)">
+		remove
 	</button>
 </template>
