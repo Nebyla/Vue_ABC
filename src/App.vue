@@ -1,5 +1,5 @@
 <script>
-import User from './components/icons/User.vue'
+import User from './components/User.vue'
 	export default {
 		components: {
 			User
@@ -7,7 +7,7 @@ import User from './components/icons/User.vue'
 }
 </script>
 <template >
-	<User />
+	<User name="john" surn="smit" />
 </template>
 
 <style scoped>
