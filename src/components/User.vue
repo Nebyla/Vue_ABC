@@ -3,8 +3,6 @@
 	emits: ['show', 'xxx', 'yyy'],
 	data() {
 		return {
-			arg1: 3,
-			arg2: 4
 		}
 	},
 	methods: {
@@ -16,5 +14,7 @@
 </script>
 <template>
 	
-	<button @click="handle">btn</button>
+	<button @click="$emit('show', 'xxx', 'yyy')">
+		btn
+	</button>
 </template>

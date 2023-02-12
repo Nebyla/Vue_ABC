@@ -5,8 +5,8 @@ import User from './components/User.vue'
 			User
 		},
     methods: {
-      func(arg1, arg2) {
-		console.log(arg1, arg2);
+      func() {
+        alert('xxx');
 	}
 }
 }
