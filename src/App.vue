@@ -2,21 +2,24 @@
 	export default {
 		data() {
       return {
-        selected: 'Не указан',
-		options: ['Понедельник', 'Вторник', 'Среда','Четверг','Пятница','Суббота','Воскресение'],
+       isDisable: false,
+       isDisabled: true,
+       selected: 'Расблокировать',
 	} 
 },
 
   }
 </script>
 <template >
-  <p>Выберите день недели</p>
-<select v-model="selected">
-		<option v-for="option in options">{{ option }}</option>
-    
+  <select v-model="selected">
+		<option v-bind:disabled="isDisable">Разблокировать</option>
+		<option v-bind:disabled="isDisabled">Блокировать</option>
+
 	</select>
+  <button v-bind:disabled="isDisable">btn</button>
+ <button v-bind:disabled="isDisabled">btn</button>
 	
-	<p>{{ selected }}</p>
+	
 </template>
 
 <style scoped>
