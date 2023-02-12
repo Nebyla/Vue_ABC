@@ -1,14 +1,17 @@
 <script>
 	export default {
-		props: ['name', 'surn'],
+		
+		
 		data() {
 			return {
-				arg: [1,2,3]
+				name: 'Yunus',
+		surn: 'Mustafaev',
 			}
 		}
 	}
 </script>
 <template>
-	{{ arg }}
+	{{ name }}
+	{{ surn }}
 	
 </template>
