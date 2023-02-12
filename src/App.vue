@@ -2,22 +2,18 @@
 	export default {
 		data() {
       return {
-       isDisable: false,
-       isDisabled: true,
-       selected: 'Расблокировать',
+       submit: '',
+       sub: '',
 	} 
 },
 
   }
 </script>
 <template >
-  <select v-model="selected">
-		<option v-bind:disabled="isDisable">Разблокировать</option>
-		<option v-bind:disabled="isDisabled">Блокировать</option>
-
-	</select>
-  <button v-bind:disabled="isDisable">btn</button>
- <button v-bind:disabled="isDisabled">btn</button>
+  <input @keyup.enter="submit" v-model="submit"/>
+  <p>{{ submit }}</p>
+  <input @keyup.page-down="onPageDown" v-model="sub"/>
+  <p>{{ sub }}</p>
 	
 	
 </template>
