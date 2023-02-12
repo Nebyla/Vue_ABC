@@ -26,11 +26,15 @@ import User from './components/User.vue'
 		],
 	}
 },
-    methods: {
-	remove(id) {
-		this.users = this.users.filter((user) => {
-			return user.id !== id;
-		})
+methods: {
+	change(id, name, surn) {
+		this.users = this.users.map((user) => {
+			if (user.id === id) {
+				user.name = name;
+				user.surn = surn;
+			}
+			return user;
+		});
 	}
 }
 }
@@ -38,11 +42,13 @@ import User from './components/User.vue'
 <template >
 	<User
 		v-for   ="user in users"
+		
 		:id     ="user.id"
 		:name   ="user.name"
 		:surn   ="user.surn"
-		@remove ="remove"
-		:key    ="user.id"/>
+		:key    ="user.id"
+		@change="change"
+	/>
 </template>
 
 <style scoped>
