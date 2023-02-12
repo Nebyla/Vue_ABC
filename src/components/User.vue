@@ -3,12 +3,12 @@
 		props: ['name', 'surn'],
 		data() {
 			return {
-				
+				arg: [1,2,3]
 			}
 		}
 	}
 </script>
 <template>
-	{{ name }}
-	{{ surn }}
+	{{ arg }}
+	
 </template>

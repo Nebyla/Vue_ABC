@@ -7,7 +7,8 @@ import User from './components/User.vue'
 }
 </script>
 <template >
-	<User name="john" surn="smit" />
+	<User :arg="{a: 1, b: 2, c: 3}" />
+  <User :arg="true" />
 </template>
 
 <style scoped>
