@@ -2,19 +2,26 @@
 	export default {
 		data() {
       return {
-       submit: '',
-       sub: '',
+        newItem: '',
+		items: ['a', 'b', 'c', 'd', 'e'],
 	} 
 },
+methods: {
+	addItem: function() {
+		this.items.push(this.newItem);
+	}
+}
 
   }
 </script>
 <template >
-  <input @keyup.enter="submit" v-model="submit"/>
-  <p>{{ submit }}</p>
-  <input @keyup.page-down="onPageDown" v-model="sub"/>
-  <p>{{ sub }}</p>
-	
+  <input v-model="newItem">
+	<button @click="addItem">add</button>
+  <ul>
+		<li v-for="(item, index) in items" :key="index">
+			{{ item }}
+		</li>
+	</ul>
 	
 </template>
 
