@@ -1,14 +1,15 @@
 <script>
 	export default {
-	emits: ['show'],
+	emits: ['show', 'xxx', 'yyy'],
 	data() {
 		return {
-			
+			arg1: 3,
+			arg2: 4
 		}
 	},
 	methods: {
-	handle() {
-		this.$emit('show');
+		handle() {
+		this.$emit('show', 'xxx', 'yyy');
 	}
 }
 }

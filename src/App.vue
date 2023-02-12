@@ -5,15 +5,14 @@ import User from './components/User.vue'
 			User
 		},
     methods: {
-	func() {
-		alert('xxx');
+      func(arg1, arg2) {
+		console.log(arg1, arg2);
 	}
 }
 }
 </script>
 <template >
 	<User @show="func" />
-
 </template>
 
 <style scoped>
