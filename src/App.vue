@@ -1,6 +1,10 @@
 <script>
 import User from './components/User.vue'
 	export default {
+    props: {
+		name: String,
+		surn: String
+	},
 		components: {
 			User
 		}
